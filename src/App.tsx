@@ -1,7 +1,6 @@
 import { useState, useCallback } from 'react'
 import { Form, Button, Flex, Card } from 'antd'
 import GenericSwitch from './components/Switch'
-
 import RadioGroupComponent from './components/RadioGroup'
 import CheckboxGroupComponent from './components/CheckboxGroup'
 import './App.css'
@@ -9,7 +8,7 @@ import './App.css'
 function App() {
   interface FormValuesProps {
     isProficient: boolean
-    toolsUsed: string | Array<string>
+    toolsUsed: Array<string>
   }
 
   const defaultValues = {
@@ -32,7 +31,13 @@ function App() {
   ]
 
   const onSubmit = useCallback((values: FormValuesProps) => {
-    console.log({ ...values })
+    const { isProficient, toolsUsed } = values
+    if (Array.isArray(toolsUsed)) {
+      const tools = toolsUsed.join(',')
+      console.log({ isProficient, tools })
+    } else {
+      console.log({ isProficient, toolsUsed })
+    }
   }, [])
 
   return (
