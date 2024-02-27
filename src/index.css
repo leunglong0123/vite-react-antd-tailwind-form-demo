@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+:root {
+  font-family: 'Nunito', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer base {
+  body {
+    @apply text-purple-dark bg-gray-100 font-nunito;
+  }
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+.ant-radio .ant-radio-inner::after {
+  content: none !important;
+}
+
+.ant-radio-inner {
+  transition: none !important;
+  border-color: #6b47ed !important;
+}
+
+.ant-radio-disabled .ant-radio-inner {
+  border-color: #d8d8d8 !important;
+  background-color: #ffffff !important;
+}
+
+.ant-radio-disabled.ant-radio-checked .ant-radio-inner {
+  background-color: #d8d8d8 !important;
+  border: #d8d8d8 !important;
+}
+
+.ant-switch .ant-switch-handle::before {
+  background-color: #6b47ed !important; /* Purple color */
+}
+
+/* This will set the switch handle to white when the switch is checked */
+.ant-switch-checked .ant-switch-handle::before {
+  background-color: #ffffff !important; /* White color */
+}
+
+.ant-switch-handle:hover {
+  background-color: inherit; /* Purple color */
+}
+
+.ant-switch-checked {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(107 71 237 / var(--tw-ring-opacity));
+}
+
+.ant-switch-handle.ant-switch-checked {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(212 204 247 / var(--tw-ring-opacity));
+}
+
+.ant-switch:hover:not(.ant-switch-disabled) {
+  background: inherit;
+}
+
+.ant-switch:hover {
+  background: inherit;
+}
+
+.ant-checkbox .ant-checkbox-inner {
+  border-radius: 50% !important;
+  width: 12px !important;
+  height: 12px !important;
+  border-color: #6b47ed !important;
+  transition: none !important;
+}
+
+.ant-checkbox .ant-checkbox-inner::after {
+  content: none !important;
+}
+
+.ant-checkbox.ant-checkbox-disabled .ant-checkbox-inner {
+  border-color: #d8d8d8 !important;
+  background-color: #ffffff !important;
+}
+
+.ant-checkbox.ant-checkbox-checked .ant-checkbox-inner {
+  background-color: #6b47ed !important;
+}
+
+.ant-checkbox.ant-checkbox-disabled.ant-checkbox-checked .ant-checkbox-inner {
+  background-color: #d8d8d8 !important;
+}
+
+.ant-checkbox-checked .ant-checkbox-inner:after {
+  border: none !important;
+}
+
+.ant-btn-primary:disabled {
+  background-color: #d4ccf7 !important;
+  border-color: #d4ccf7 !important;
+  color: #ffffff !important;
+}
