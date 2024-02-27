@@ -4,7 +4,7 @@
 @import 'tailwindcss/utilities';
 
 :root {
-  font-family: 'Nunito', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Nunito', system-ui, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -47,7 +47,11 @@ body {
 
 .ant-radio-disabled.ant-radio-checked .ant-radio-inner {
   background-color: #d8d8d8 !important;
-  border: #d8d8d8 !important;
+  border-color: #d8d8d8 !important;
+}
+
+.ant-radio-disabled.ant-radio-checked::after {
+  content: none !important;
 }
 
 .ant-switch .ant-switch-handle::before {

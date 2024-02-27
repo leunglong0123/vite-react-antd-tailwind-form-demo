@@ -1,5 +1,5 @@
 import { useState, useCallback } from 'react'
-import { Form, Button, Flex, Card, FormProps } from 'antd'
+import { Form, Button, Flex, Card } from 'antd'
 import GenericSwitch from './components/Switch'
 
 import RadioGroupComponent from './components/RadioGroup'

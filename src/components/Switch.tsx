@@ -1,4 +1,3 @@
-import React from 'react'
 import { Switch, SwitchProps } from 'antd'
 
 interface GenericSwitchProps extends SwitchProps {
